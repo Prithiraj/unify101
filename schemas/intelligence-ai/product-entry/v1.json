@@ -1,6 +1,6 @@
 {
 	"$id": "https://schemas.unify101.com/intelligence-ai/product-entry/v1.json",
-	"$schema": "http://json-schema.org/draft/2020-12/schema",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "An Intelligence AI Product Entry",
 	"type": "object",
 	"required": ["title", "description", "price", "currency", "url", "image_url", "timestamp", "sku"],
