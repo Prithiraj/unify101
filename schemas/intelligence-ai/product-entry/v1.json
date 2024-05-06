@@ -1,0 +1,33 @@
+{
+	"$id": "https://schemas.unify101.com/intelligence-ai/product-entry/v1.json",
+	"$schema": "http://json-schema.org/draft/2020-12/schema",
+	"title": "An Intelligence AI Product Entry",
+	"type": "object",
+	"required": ["title", "description", "price", "currency", "url", "image_url", "timestamp", "sku"],
+	"additionalProperties": false,
+	"properties": {
+		"title": {
+			"type": "string"
+		},
+		"description": {
+			"type": "string"
+		},
+		"price": {
+			"type": "number", "exclusiveMinimum": 0
+		},
+		"currency": {"enum":["USD", "GBP"]
+		},
+		"url": {
+			"type": "string", "format": "uri"
+		},
+		"image_url": {
+			"type": "string", "format": "uri"
+		},
+		"timestamp": {
+			"type": "string", "format": "date-time"
+		},
+		"sku": {
+			"type": "string", "pattern": "^SHBH\\d{5}$"
+		}
+	}
+}
